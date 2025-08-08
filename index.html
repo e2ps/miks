@@ -1,3 +1,16 @@
+<?php
+  $conn = mysqli_connect("localhost", "root", "", "intro_php_mysql_db") or die('connection error');
+
+	$hero_sql = "SELECT * FROM card_tb";
+	$hero_query = mysqli_query($conn, $hero_sql);
+	$card = mysqli_fetch_all($hero_query);
+	//print_r($card);
+
+  $carousel_sql = "SELECT * FROM carousel_tb";
+	$carousel_query = mysqli_query($conn, $carousel_sql);
+	$carousel = mysqli_fetch_all($carousel_query);
+	//print_r($carousel);
+?>
 <!doctype html>
 <html lang="en">
   <head>
